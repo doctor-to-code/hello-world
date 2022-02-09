@@ -29,3 +29,13 @@ Location: 板橋
 //               佛祖保佑         永無BUG
 
 """
+#閏年預測器:
+while True:
+    a = int(input('這是閏年測試器，請輸入年份 = '))
+    x1 = a % 4 == 0
+    x2 = a % 100 != 0
+    x3 = x1 and x2
+    if x3 == True:
+        print("這是閏年")
+    else:
+        print("這不是閏年")
