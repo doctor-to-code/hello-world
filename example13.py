@@ -1,7 +1,7 @@
 """
 Python 課程
 Author: PY
-Date: 2022/02/09
+Date: 2022/02/10
 Location: 板橋
 
 //                       _oo0oo_
@@ -29,3 +29,13 @@ Location: 板橋
 //               佛祖保佑         永無BUG
 
 """
+
+# 輸入半徑自動計算圓周以及圓面積
+# import math: 意思是引入數學符號庫，像我們需要圓周率pi就寫作math. pi
+import math
+
+while True:
+    x = float(input('請輸入圓半徑'))
+    perimeter = x * math.pi
+    area = (x ** 2) * math.pi
+    print(f'圓周長為,{perimeter:.4f}', f'圓面積為, {area:.4f}')
