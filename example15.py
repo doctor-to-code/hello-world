@@ -28,4 +28,26 @@ Location: 板橋
 //
 //               佛祖保佑         永無BUG
 
+
+
+#要怎麼使用python表達數學函數公式呢?
+#可google搜尋cmd markdown語法裡面有各種複雜數學符號以及運算寫法
+#網址1: https://www.itread01.com/content/1541831543.html
+#網址2: https://www.zybuluo.com/codeep/note/163962
+
+分段函數求解:
+       3x - 5, x > 1
+f(x) = x + 2, -1 <= x <= 1
+       5x + 3, x < -1
+
 """
+#寫程序時，flat is better than nested，扁平比鑲嵌格式更好更易讀也更容易修改
+#在同一個縮徑就屬於同一個代碼區塊
+x = float(input('請輸入給定x值'))
+if x > 1:
+    y = (3 * x - 5)
+elif x < -1:
+    y = (5 * x + 3)
+else:
+    y = (x + 2)
+print(f'f(x) = {y:.4f}')
