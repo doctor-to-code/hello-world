@@ -28,14 +28,17 @@ Location: 板橋
 //
 //               佛祖保佑         永無BUG
 
-"""
+
 #判斷一個數字是否為質數
+#num = x(正整數) ** y(次方數) - z(調整數)
+"""
+
 x = int(input('請輸入一個正整數'))
 y = int(input('請輸入x次方數'))
 z = int(input('調整數'))
 num = x ** y - z
 x = True
-for i in range(num-1, 0, -1):
+for i in range(num-1, 1, -1):
     if num % i == 0:
         x = False
         break
