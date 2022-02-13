@@ -29,3 +29,13 @@ Location: 板橋
 //               佛祖保佑         永無BUG
 
 """
+
+#找出兩數字最大公因數
+x = int(input('請輸入數字'))
+y = int(input('請輸入數字'))
+for i in range(x, 0, -1):
+    if x % i == 0 and y % i == 0:
+        print(i)
+        break
+
+#mobilize; demobilize
