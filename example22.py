@@ -29,3 +29,9 @@ Location: 板橋
 //               佛祖保佑         永無BUG
 
 """
+x = int(input('請輸入一個正整數'))
+total = 0
+while x > 0:
+    total = total * 10 + x % 10
+    x //= 10
+print(total)
