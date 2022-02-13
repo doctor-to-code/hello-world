@@ -29,3 +29,22 @@ Location: 板橋
 //               佛祖保佑         永無BUG
 
 """
+
+#while 循環使用時機: 在不知道循環要做多少次時適用
+#如果已知要多少循環數量，則建議使用for i in range()寫法
+
+i = 0
+while i < 10:
+    print(i, 'cycle running')
+    i += 1
+
+print('unloading program')
+#===========================================
+#利用while寫法求出兩數最大公因數?
+#line 46寫法是指說如果x不能整除y，把x除y餘數賦予給新的x，原本x賦值給新的y，再進行一次x除以y
+#直到可以除盡，則顯示最後一次的x值，也就是最大公因數，此算法為歐幾里得算法
+x = int(input('請輸入數字'))
+y = int(input('請輸入數字'))
+while x % y != 0:
+    x , y = x % y, x
+print(x)
