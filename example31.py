@@ -27,5 +27,17 @@ Location: 板橋
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 //               佛祖保佑         永無BUG
-
+公雞一隻5元，母雞一隻3元，小雞三隻1元，100元買雞可以怎麼買，且雞隻總數為100隻
+概念: 窮舉法，把所有可能列出
 """
+import time
+start = time.time()
+for x in range(0, 21):
+    for y in range(0, 34):
+        for z in range(0, 100, 3):
+            if x + y + z == 100 and 5 * x + 3 * y + z // 3 == 100:
+                print(x ,y ,z)
+end = time.time()
+print(f'執行用時{end - start:.3f}秒')
+
+
