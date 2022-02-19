@@ -29,3 +29,18 @@ Location: 板橋
 //               佛祖保佑         永無BUG
 
 """
+
+x = int(input('三角形邊長a'))
+y = int(input('三角形邊長b'))
+z = int(input('三角形邊長c'))
+a = x + y > z
+b = x + z > y
+c = y + z > x
+k = x + y + z
+s = k / 2
+import cmath
+area = cmath.sqrt((s) * (s - x) * (s - y) * (s - z)) #海龍公式
+if a and b and c:
+    print('可構成三角形','周長為', x + y + z, '面積為', area, s)
+else:
+    print('無法構成三角形')
