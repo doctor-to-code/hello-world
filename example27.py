@@ -29,3 +29,13 @@ Location: 板橋
 //               佛祖保佑         永無BUG
 
 """
+#乘法表:
+k = int(input('輸入想要建立的數字內的乘法表'))
+for x in range(k + 1):
+    for y in range(1, x + 1):
+        print(x, 'x', y, '=', x * y, end=', ')
+    print()
+
+'''
+print(x, 'x', y, '=', x * y)相當於print(f'{x} x {y} = {x * y}')
+'''
