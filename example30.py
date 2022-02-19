@@ -27,5 +27,25 @@ Location: 板橋
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 //               佛祖保佑         永無BUG
+題目: 找出1 - 10000完美數，即除自身以外所有因子之和為自身數字，ex: 6 = 1 + 2 +3
+同樣題目但比起example29要寫得更有效率
+其實這個是主要差異點，不需要做到1, num，只需要檢查到num開根號+1即可，如60開根號取整數+1 = 8
+往下找如6， 60 / 6 = 10，在往下找， 60 / 5 = 12, 60 / 4 = 15....即可檢查出所有因數
+再把他們相加即可
 
 """
+
+import time
+start = time.time()
+for num in range(2, 10000):
+    x = 1
+    for i in range(2, int(num ** 0.5 + 1)):
+        if num % i == 0:
+            x += i
+            if num % i != i:
+                x += num // i
+
+    if num == x:
+        print(num)
+end = time.time()
+print(f'執行時間{end - start:.3f}秒')
