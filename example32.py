@@ -27,5 +27,14 @@ Location: 板橋
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 //               佛祖保佑         永無BUG
-
+跟example31一樣題目但是寫的方法讓程式更有效率運行
 """
+import time
+start = time.time()
+for x in range(1, 21):
+    for y in range(1, 34):
+        z = 100 - x - y
+        if z % 3 == 0 and 5 * x + 3 * y + z / 3 == 100:
+            print(x ,y ,z)
+end = time.time()
+print(f'執行用時{end - start:.3f}秒')
