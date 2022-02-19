@@ -27,5 +27,16 @@ Location: 板橋
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 //               佛祖保佑         永無BUG
-
+題目: 找出1 - 10000完美數，即除自身以外所有因子之和為自身數字，ex: 6 = 1 + 2 +3
 """
+import time
+start = time.time()
+for num in range(2, 10001):
+    x = 1
+    for i in range(2, num):
+        if num % i == 0:
+            x += i
+    if num == x:
+        print(num)
+end = time.time()
+print(f'執行時間, {end - start:.4f}')
