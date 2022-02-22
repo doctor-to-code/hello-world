@@ -29,3 +29,22 @@ Location: 板橋
 //               佛祖保佑         永無BUG
 
 """
+nums = []
+for _ in range(10):
+    temp = int(input('請輸入數字')) #讓這個自訂義List只能配合輸入10次
+    nums.append(temp)
+Mean_value = sum(nums) / len(nums)
+
+for num in nums:
+    total = 0
+    total += (num - Mean_value) ** 2
+    variation = total / len(nums)
+    standard_variation = variation ** 0.5
+
+Max_Value, Mini_Value = max(nums), min(nums)
+
+print('字串為', nums)
+print('平均為', Mean_value)
+print('標準差為', standard_variation)
+print('最大值為', Max_Value)
+print('最小值為', Mini_Value)
