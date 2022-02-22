@@ -29,3 +29,19 @@ Location: 板橋
 //               佛祖保佑         永無BUG
 
 """
+import random
+fs = [0] * 7
+#此寫法簡化了fs = [0, 0, 0, 0, 0, 0, 0] 只有6個面但是為了符合下面所以列表7個值，0就當作佔位用，其他則是1-6值次數，初始都是0
+
+k = int(input('請輸入骰子次數'))
+for _ in range(k):
+    face = random.randrange(1, 7)
+    fs[face] += 1 #fs[face -1] = fs[face - 1]  + 1
+
+#寫法一:
+for y in range(len(fs)):
+    print(f'點數{y}出現, {fs[y]}次')
+print('=' * 20)
+#寫法二:
+for i, value in enumerate(fs):
+    print(f'點數{i}, 出現了 {value}次')
