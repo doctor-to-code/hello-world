@@ -28,25 +28,4 @@ Location: 板橋
 //
 //               佛祖保佑         永無BUG
 
-ABCDE一起出海捕魚，成果相當豐碩，回去後其他人先休息了，A獨自先把漁獲先分成五份然後丟棄多的一隻
-B起床後看到以為還沒分過，於是也做了一樣分法把剩下漁獲分成五份然後丟棄多的一隻
-C起床...
-D起床...
-E起床...同上，試問他們最少捕獲多少條魚
 """
-fish = 1
-while True:
-    is_enough = True
-    total = fish
-    #檢查漁獲數量是否夠五個人分
-    for _ in range(5): #這邊沒有用i 而是用一個_帶過是因為在python中如果無需使用變量則統一使用下滑線代替
-        if (total - 1) % 5 == 0:
-            total = (total - 1) // 5 * 4
-        else:
-            is_enough = False
-            break
-
-    if is_enough:
-        print(fish)
-        break
-    fish += 1
