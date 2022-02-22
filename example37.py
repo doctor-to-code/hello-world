@@ -28,4 +28,48 @@ Location: 板橋
 //
 //               佛祖保佑         永無BUG
 
+寫一個程序，有2顆骰子，給定擲骰子次數，求2顆骰子之和結果分布
+
 """
+import random
+
+f1 = f2 = f3 = f4 = f5 = f6 = f7 = f8 = f9 = f10 = f11 = 0
+x = int(input('輸入要擲骰子次數'))
+for _ in range(x):
+    y = random.randrange(1, 7)
+    z = random.randrange(1, 7)
+    r = y + z
+    if r == 2:
+        f1 += 1
+    elif r == 3:
+        f2 += 1
+    elif r == 4:
+        f3 += 1
+    elif r == 5:
+        f4 += 1
+    elif r == 6:
+        f5 += 1
+    elif r == 7:
+        f6 += 1
+    elif r == 8:
+        f7 += 1
+    elif r == 9:
+        f8 += 1
+    elif r == 10:
+        f9 += 1
+    elif r == 11:
+        f10 += 1
+    elif r == 12:
+        f11 += 1
+
+print(f'點數1出現了{f1}次')
+print(f'點數2出現了{f2}次')
+print(f'點數3出現了{f3}次')
+print(f'點數4出現了{f4}次')
+print(f'點數5出現了{f5}次')
+print(f'點數6出現了{f6}次')
+print(f'點數1出現了{f7}次')
+print(f'點數2出現了{f8}次')
+print(f'點數3出現了{f9}次')
+print(f'點數4出現了{f10}次')
+print(f'點數5出現了{f11}次')
