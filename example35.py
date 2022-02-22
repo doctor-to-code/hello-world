@@ -28,4 +28,20 @@ Location: 板橋
 //
 //               佛祖保佑         永無BUG
 
+建立一個程序可以自動計算1-100之和以及
 """
+#這邊沒有用i 而是用一個_帶過是因為在python中如果無需使用變量則統一使用下滑線代替
+
+Max_value, Mini_value = 0, 100
+#這邊注意故意把0賦值給Max，把100賦值給Mini是有特殊用意的
+#因為這樣底下寫法就是誰大於Max就會成為新的Max，因為0一定會被任何數值超越才能符合我們寫法，反之Mini
+total = 0
+for _ in range(10):
+    x = int(input('請輸入整數'))
+    total += x
+    if x > Max_value:
+        Max_value = x
+    if x < Mini_value:
+        Mini_value = x #注意順序這段要把x 賦值給新的Mini_value，順序上要寫成Mini_value = x
+print(total, total / 10)
+print(f'最大值{Max_value}, 最小值{Mini_value}')
