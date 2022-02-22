@@ -29,3 +29,27 @@ Location: 板橋
 //               佛祖保佑         永無BUG
 
 """
+nums = [22, 52, 89, 96, 99, 102] #位置[0, 1, 2, 3, 4, 5]
+print(nums[3])
+#如果出現list index out of range代表超過該索引範圍數字，例如你打出print(nums[8])
+
+print(nums[-1], nums[-3])
+#一般運算都是正向索引，但這個索引運算就是利用負向索引，-1位置相當102，-3位置相當96以此類推
+
+nums[2] = 120 #把89替換成120，亦即把120賦值給2位置
+
+print(nums)
+
+for i in range(5): # 利用窮舉法for loop表達nums所有內容
+    print(nums[i],end=' ')
+
+print(' ', '-' * 20)
+
+#len概念，有時list經過反覆增減內容我們搞不清楚有多少數字在其中，我們希望電腦自動判讀，例如:
+lists = [22, 24, 36, 45, 69, 71]
+lists.pop()
+lists.append(99)
+lists.append(122)
+lists.insert(2, 80) #在位置2之前加入80這個數
+for i in range(len(lists)): #經過反覆增減我們搞不清楚有多少數字，但只要寫出len(lists)他就可以自動判斷列表長度
+    print(lists[i], end=' ')
